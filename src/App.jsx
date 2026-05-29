@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 
-import About from "./pages/About";
-import Skills from "./pages/Skills";
-import Projects from "./pages/Projects";
-import Resume from "./pages/Resume";
-import Contact from "./pages/Contact";
+import About from "./pages/About.jsx";
+import Skills from "./pages/Skills.jsx";
+import Projects from "./pages/Projects.jsx";
+import Resume from "./pages/Resume.jsx";
+import Contact from "./pages/Contact.jsx";
 
 function Navbar() {
   const links = [
@@ -22,64 +22,35 @@ function Navbar() {
         top: 0,
         left: 0,
         right: 0,
-        zIndex: 100,
-        background: "rgba(6,11,15,0.88)",
-        backdropFilter: "blur(20px)",
-        borderBottom: "1px solid rgba(0,188,212,0.12)",
-        padding: "0 24px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
         height: "64px",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        padding: "0 24px",
+        background: "rgba(6,11,15,0.9)",
+        backdropFilter: "blur(20px)",
+        borderBottom: "1px solid rgba(0,188,212,0.2)",
+        zIndex: 1000,
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-        <div
-          style={{
-            width: 40,
-            height: 40,
-            borderRadius: "10px",
-            background: "linear-gradient(135deg,#00bcd4,#26a69a)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            fontWeight: 800,
-            fontSize: "16px",
-            color: "#060b0f",
-          }}
-        >
-          SC
-        </div>
-
-        <div>
-          <div style={{ fontWeight: 700, fontSize: "15px", color: "#e0f7fa" }}>
-            Subhajit Chakraborty
-          </div>
-          <div style={{ fontSize: "11px", color: "#00bcd4" }}>
-            Web Developer
-          </div>
-        </div>
+      <div style={{ color: "#00bcd4", fontWeight: 700 }}>
+        Subhajit
       </div>
 
-      <div style={{ display: "flex", gap: "4px" }}>
+      <div style={{ display: "flex", gap: "10px" }}>
         {links.map((l) => (
           <NavLink
             key={l.to}
             to={l.to}
             end={l.to === "/"}
             style={({ isActive }) => ({
-              padding: "8px 16px",
-              borderRadius: "8px",
-              background: isActive
-                ? "rgba(0,188,212,0.15)"
-                : "transparent",
+              textDecoration: "none",
+              padding: "6px 12px",
+              borderRadius: "6px",
               color: isActive ? "#00bcd4" : "#90a4ae",
               border: isActive
-                ? "1px solid rgba(0,188,212,0.3)"
+                ? "1px solid #00bcd4"
                 : "1px solid transparent",
-              textDecoration: "none",
-              fontSize: "14px",
-              fontWeight: isActive ? 600 : 400,
             })}
           >
             {l.label}
@@ -95,27 +66,13 @@ export default function App() {
     <BrowserRouter>
       <div
         style={{
-          fontFamily: "'Sora','Segoe UI',sans-serif",
-          background: "#060b0f",
           minHeight: "100vh",
+          background: "#060b0f",
           color: "#fff",
           paddingTop: "64px",
+          fontFamily: "sans-serif",
         }}
       >
-        <style>{`
-          @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap');
-
-          * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-          }
-
-          body {
-            background: #060b0f;
-          }
-        `}</style>
-
         <Navbar />
 
         <Routes>
