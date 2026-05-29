@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import { HashRouter, Routes, Route, NavLink } from "react-router-dom";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
@@ -43,7 +43,7 @@ function Navbar() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div style={{ fontFamily:"'Sora','Segoe UI',sans-serif", background:"#060b0f", minHeight:"100vh" }}>
         <style>{`
           @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap');
@@ -64,6 +64,6 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
