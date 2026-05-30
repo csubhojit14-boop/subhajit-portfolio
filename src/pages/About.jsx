@@ -108,9 +108,6 @@ export default function About() {
 
         {/* Name */}
         <div style={{ opacity: loaded ? 1 : 0, transform: loaded ? "translateY(0)" : "translateY(30px)", transition: "all 0.7s ease 0.2s" }}>
-          <div style={{ fontSize: "13px", color: "#00bcd4", fontWeight: 600, letterSpacing: "0.3em", textTransform: "uppercase", marginBottom: "12px" }}>
-            👋 Hello World!
-          </div>
           <h1 style={{ fontSize: "clamp(26px,5.5vw,56px)", fontWeight: 800, marginBottom: "16px", lineHeight: 1.1 }}>
             I'm{" "}
             <span style={{
