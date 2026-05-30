@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, NavLink, useState } from "react-router-dom";
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import { useState } from "react";
 import About from "./pages/About.jsx";
 import Skills from "./pages/Skills.jsx";
